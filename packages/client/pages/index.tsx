@@ -43,8 +43,6 @@ const Index: NextPage<Props> = (props: Props) => {
   let defaultNavContent = navigation?.links || [ { title: 'Error: No Navigation Slot with content for delivery key "slots/navigation"', href: '/' }]
   const navigationLinks = defaultNavContent;
 
-  console.log(JSON.stringify(slot))
-
   let defaultSlotContent = {
     components: [
       {
@@ -66,19 +64,10 @@ const Index: NextPage<Props> = (props: Props) => {
       </Head>
       
       <div>
-          {/* <PromoBanner>BREAKING: Cobra Kai allowed to compete</PromoBanner>
- */}
           <Header actions={<UserActions />}
             search={<SearchBox />}
-            // navigation={(
-            //   <Navigation links={navigationLinks}>
-            //   </Navigation>
-            // )}
             onToggleSidebar={handleToggleSidebar}>
           </Header>
-
-              {/* components[0].product carousel[0].masterData.current.masterVariant.images[0].url */}
-
         {
             slotContent.components.map(component => {
                 let ComponentType = null;
@@ -121,20 +110,9 @@ const Index: NextPage<Props> = (props: Props) => {
   );
 }
 
-Index.getInitialProps = async (context) => {
-  const navigation = await fetchContent('slots/avkc-navigation', context);
-
-  console.log(JSON.stringify(navigation))
-
-  const slot = (await axios.get(`https://dlilly.ngrok.io/api/homepage`, { headers: { Authorization: 'daves-test-project' } })).data
-  // const slot = await fetchContent('dave-page-slot', context);
-  // const productCarousel = fetchContent('product-carousel', context);
-  // const products = await axios.get(`https://dlilly.ngrok.io/api/products`, { headers: { Authorization: 'daves-test-project' } })
-
-  return {
-    navigation,
-    slot
-  };
-};
+Index.getInitialProps = async (context) => ({
+  navigation: await fetchContent('slots/avkc-navigation', context),
+  slot: (await axios.get(`http://localhost:3001/api/homepage`, { headers: { Authorization: 'daves-test-project' } })).data
+});
 
 export default Index;
