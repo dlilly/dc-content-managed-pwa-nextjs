@@ -8,7 +8,7 @@ const styles = (theme: Theme) => ({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        background: theme.palette.grey.A400,
+        background: '#f30000',
         borderBottom: `1px solid ${theme.palette.grey[700]}`,
         color: theme.palette.getContrastText(theme.palette.grey.A400)
     }
@@ -17,6 +17,7 @@ const styles = (theme: Theme) => ({
 interface Props extends PropsWithChildren<WithStyles<typeof styles>> {
     className?: string;
     style?: React.CSSProperties;
+    text?: string;
 }
 
 const PromoBanner: React.SFC<Props> = (props) => {
@@ -24,12 +25,13 @@ const PromoBanner: React.SFC<Props> = (props) => {
         classes,
         className,
         children,
+        text,
         ...other
     } = props;
 
     return (
         <div className={clsx(classes.root, className)} {...other}>
-            {children}
+            {text}
         </div>
     );
 };

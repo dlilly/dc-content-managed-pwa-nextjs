@@ -78,9 +78,9 @@ const GalleryBlock: React.SFC<Props> = (props) => {
                                 <Typography variant="h5">
                                     {item.title}
                                 </Typography>
-                                <CallToAction href={item.callToActionHref}>
+                                {/* <CallToAction href={item.callToActionHref}>
                                     {item.callToAction}
-                                </CallToAction>
+                                </CallToAction> */}
                             </div>
                         </li>
                     })

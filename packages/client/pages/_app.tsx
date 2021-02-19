@@ -6,6 +6,8 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/core';
 import createTheme from '../components/createTheme';
 import GlobalStyle from '../components/GlobalStyle';
+import 'react-img-carousel/lib/carousel.css';
+// import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 export default class App extends NextApp {
     componentDidMount() {

@@ -1,0 +1,30 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://anyafinn.dev/component-dave-promo-banner-block.json",
+
+	"title": "Dave Promo Block",
+	"description": "",
+
+	"allOf": [
+		{
+			"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+		}
+	],
+	
+	"type": "object",
+	"properties": {
+		"component": {
+			"type": "string",
+			"const": "PromoBannerBlock"
+		},
+		"text": {
+			"type": "string",
+			"title": "Text"
+		}
+	},
+	
+	"propertyOrder": ["text"],
+    
+    "definitions": {
+    }
+}

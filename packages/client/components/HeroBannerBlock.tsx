@@ -53,9 +53,7 @@ const HeroBannerBlock: React.SFC<Props> = (props) => {
 
     const imageUrl = getImageURL(image, {
         width: 3000,
-        upscale: false,
-        scaleMode: ImageScaleMode.ASPECT_RATIO,
-        aspectRatio: '16:5'
+        upscale: false
     });
 
     return (

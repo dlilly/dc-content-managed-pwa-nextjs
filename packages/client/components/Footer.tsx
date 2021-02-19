@@ -70,7 +70,7 @@ const Footer: React.SFC<Props> = (props) => {
                 <SocialMediaLinks />
             </div>
             <div className={classes.copyrightWrap}>
-                © 2020 ANYA FINN. All Rights Reserved.
+                © 2021 All Valley Karate Committee. All Rights Reserved.
              </div>
         </footer>
     );

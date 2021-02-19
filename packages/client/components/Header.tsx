@@ -117,9 +117,9 @@ const Header: React.SFC<Props> = (props) => {
                     <div className={classes.burgerMenuWrap}>
                         <IconButton onClick={onToggleSidebar}><MenuIcon /></IconButton>
                     </div>
-                    <div className={classes.logoWrap}>
+                    {/* <div className={classes.logoWrap}>
                         <Logo height={48} />
-                    </div>
+                    </div> */}
                     <div className={classes.desktopSearchWrap}>
                         {search}
                     </div>

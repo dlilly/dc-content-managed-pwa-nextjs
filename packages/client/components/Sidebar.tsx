@@ -124,7 +124,7 @@ const Sidebar: React.SFC<Props> = (props) => {
                         <List component="nav" aria-label="secondary mailbox folders">
                             {
                                 links.map(link => {
-                                    return <Link href={link.href}>
+                                    return <Link href="#">
                                         <ListItem button>
                                             <ListItemText primary={link.title} />
                                         </ListItem>

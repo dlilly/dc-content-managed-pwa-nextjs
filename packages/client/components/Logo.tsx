@@ -21,7 +21,7 @@ const Logo: React.SFC<Props> = (props) => {
     return (
         <Link href="/">
             <a>
-                <img {...other} alt="" src="/img/logo.png" />
+                <img {...other} alt="" src="/img/avkc_logo.jpeg" />
             </a>
         </Link>
     );
